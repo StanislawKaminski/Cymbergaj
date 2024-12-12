@@ -1,0 +1,134 @@
+.character1{
+    position: relative;
+    border-radius: 50%;
+    float: left;
+    left: -25px;
+    top: 0px;
+    background-color: brown;
+    height: 50px;
+    width: 50px;
+}
+.character2{
+    position: relative;
+    border-radius: 50%;
+    float: left;
+    left: 0px;
+    top: 0px;
+    background-color: darkcyan;
+    height: 50px;
+    width: 50px;
+}
+.character3{
+    z-index: 3;
+    position: relative;
+    border-radius: 50%;
+    float: left;
+    left: 600px;
+    top: 47px;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+}
+.nametag1{
+    text-align: center;
+    font-size: small;
+    background-color: rgba(0 , 0 , 0 ,0.6);
+    color: white;
+}
+.ARROWS{
+    background-image: url(images/Bez\ tytułu.png);
+    position: absolute;
+    left: 50%;
+    border-color: brown;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: solid;
+    height: 650px;
+    width: 625px;
+}
+.WASD{
+    background-image: url(images/Bez\ tytułu.png);
+    position: absolute;
+    right: 50%;
+    border-color: brown;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: solid;
+    height: 650px;
+    width: 622px;
+    z-index: 20;
+}
+.bramka1{
+    position: relative;
+    left: 625px;
+    top: 200px;
+    border-color: black;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: dotted;
+    height: 250px;
+    width: 50px;
+    z-index: 20;
+    background-color: white;
+
+}
+.bramka2{
+    position: relative;
+    left: -55px;
+    top: 200px;
+    border-color: black;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: dotted;
+    height: 250px;
+    width: 50px;
+    background-color: white;
+
+}
+
+.play_area{
+    margin-top: 125px;
+    left: auto;
+    right: auto;
+    display: block;
+    background-color: white;
+}
+
+body{
+    background-color: dodgerblue;
+}
+.scores{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: -25px;
+    width: 99%;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 50pt;
+}
+.goal {
+    animation: blinker 1s linear infinite;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 30%;
+    width: 99%;
+    position: absolute;
+    text-align: center;
+    font-size: 50pt;
+    visibility: hidden;
+    background-color: rgba(0 , 0 , 0 ,0.6);
+    z-index: 99;
+  }
+  
+  @keyframes blinker {
+    0% {
+        color: yellow;
+    }
+    50% {
+        color: red;
+    }
+    100% {
+        color: yellow;
+    }
+  }
+
