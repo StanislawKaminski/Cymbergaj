@@ -31,16 +31,16 @@ class MovingObjectARROWS {
  
     updatePosition() {
         if (this.keysPressed['ArrowUp'] && pos1y > 0 && pos1y <= 600 && poslock == 0){
-            pos1y -= 1.9;
+            pos1y -= 2;
         }
         if (this.keysPressed['ArrowLeft'] && pos1x > 26 && pos1x <= 600 && poslock == 0){
-            pos1x -= 1.9;
+            pos1x -= 2;
         }
         if (this.keysPressed['ArrowRight'] && pos1x >= 26 && pos1x < 600 && poslock == 0){
-            pos1x += 1.9;
+            pos1x += 2;
         }
         if (this.keysPressed['ArrowDown'] && pos1y >= 0 && pos1y < 600 && poslock == 0){
-            pos1y += 1.9;
+            pos1y += 2;
         }
         this.element.style.transform = `translate(${pos1x}px, ${pos1y}px)`;
     }
@@ -71,16 +71,16 @@ class MovingObjectWASD {
  
     updatePosition() {
         if (this.keysPressed['w'] && pos2y > 0 && pos2y <= 600 && poslock == 0){ 
-            pos2y -= 1.9;
+            pos2y -= 2;
         }
         if (this.keysPressed['a'] && pos2x > 0 && pos2x <= 574 && poslock == 0) {
-            pos2x -= 1.9;
+            pos2x -= 2;
         }
         if (this.keysPressed['d'] && pos2x >= 0 && pos2x < 574 && poslock == 0) {
-            pos2x += 1.9;
+            pos2x += 2;
         }
         if (this.keysPressed['s'] && pos2y >= 0 && pos2y < 600 && poslock == 0){ 
-            pos2y += 1.9;
+            pos2y += 2;
         }
         this.element.style.transform = `translate(${pos2x}px, ${pos2y}px)`;
     }
@@ -105,8 +105,8 @@ class MovingObjectBALL {
         var p1 = document.getElementById("score1");
         var p2 = document.getElementById("score2");
         if (((pos1x - this.x <= 50 && pos1x - this.x > 0) || (pos1x - this.x >= -50 && pos1x - this.x <= 0)) && ((pos1y - (this.y+300) <= 50 && pos1y - (this.y+300) >= 0) || (pos1y - (this.y+300) >= -50 && pos1y - (this.y+300) <= 0))){
-            this.vx = -(pos1x - this.x) / 25;
-            this.vy = -(pos1y- this.y-300) / 25;
+            this.vx = -(pos1x - this.x) / 23;
+            this.vy = -(pos1y- this.y-300) / 23;
             audio2.play();
             if (this.vx < 0){
                 this.dirx = -1;
@@ -118,8 +118,8 @@ class MovingObjectBALL {
             else this.diry = 1;
         }
         if (((pos2x - (this.x + 600) <= 50 && pos2x - (this.x + 600) >= 0) || (pos2x - (this.x + 600) >= -50 && pos2x - (this.x + 600) <= 0)) && ((pos2y - (this.y+300) <= 50 && pos2y - (this.y+300) >= 0) || (pos2y - (this.y+300) >= -50 && pos2y - (this.y+300) <= 0))){
-            this.vx = -(pos2x - this.x-600) / 25;
-            this.vy = -(pos2y- this.y-300) / 25;
+            this.vx = -(pos2x - this.x-600) / 23;
+            this.vy = -(pos2y- this.y-300) / 23;
             audio2.play();
             if (this.vx < 0){
                 this.dirx = -1;
